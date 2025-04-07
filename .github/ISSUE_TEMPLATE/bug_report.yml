@@ -1,0 +1,84 @@
+name: Bug report
+description: Create a report to help us improve
+title: "[FE|BE|공통] [1/2/3/4] [OS/브라우저/응답코드] 제목을 입력해주세요"
+labels: []
+assignees: []
+
+body:
+  - type: checkboxes
+    id: area
+    attributes:
+      label: 관련 영역 (필수 선택)
+      description: 어떤 영역에서 발생한 이슈인가요?
+      options:
+        - label: Frontend
+        - label: Backend
+        - label: 공통 / 기타
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 이슈 심각도 (1~4 숫자 선택)
+      description: 이슈의 심각도를 선택해주세요.
+      options:
+        - "1 - 크리티컬 (앱/사이트 사용이 불가능한 수준)"
+        - "2 - 주요 기능 동작 오류 (사용은 가능하나 UX 저해)"
+        - "3 - 사소한 UI/디자인 이슈"
+        - "4 - 개선 제안 또는 경미한 버그"
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 버그 설명
+      description: 버그에 대한 명확하고 간결한 설명을 작성해주세요.
+      placeholder: 예) 로그인 버튼 클릭 시 페이지가 멈춤
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: ▶️ 재현하는 방법
+      description: 버그를 어떻게 재현할 수 있나요?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ 예상한 동작
+      description: 정상적으로 동작했어야 하는 상황을 작성해주세요.
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 📸 스크린샷/영상
+      description: 문제를 설명하는 데 도움이 되는 스크린샷 또는 영상을 첨부해주세요.
+
+  - type: textarea
+    id: desktop-info
+    attributes:
+      label: 💻 데스크톱 정보
+      description: 데스크톱 환경에서 문제가 발생했다면 작성해주세요.
+      placeholder: |
+        - OS: 예) Windows 11
+        - Browser: 예) Chrome 122
+        - Version: 예) 1.0.0
+
+  - type: textarea
+    id: mobile-info
+    attributes:
+      label: 📱 모바일 정보
+      description: 모바일 환경에서 문제가 발생했다면 작성해주세요.
+      placeholder: |
+        - Device: 예) iPhone 13
+        - OS: 예) iOS 17.1
+        - Browser: 예) Safari
+        - Version: 예) 1.0.0
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 추가적인 내용
+      description: 문제에 대한 기타 참고할 내용이나 특이사항을 적어주세요.
